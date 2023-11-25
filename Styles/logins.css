@@ -1,0 +1,78 @@
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    background-color: #fff;
+    display: flex;
+    align-items: stretch;
+    height: 100vh;
+}
+
+.login-container {
+    flex: 1;
+    display: flex;
+    overflow: hidden;
+}
+
+.login-image {
+    background: url('../Assets/ict.jpeg') center/cover;
+    flex: 0 0 60%;
+    display: block;
+}
+
+.login-form {
+    flex: 1;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+}
+
+h2 {
+    color: #007BFF;
+}
+
+label {
+    display: block;
+    margin: 10px 0; /* Adjusted margin for shorter distance between input box and label */
+    color: #495057;
+    font-size: 18px;
+}
+
+input {
+    width: 100%;
+    padding: 22px;
+    margin-bottom: 10px;
+    border: 1px solid #ced4da;
+    border-radius: 10px;
+    box-sizing: border-box;
+    font-size: 18px;
+}
+
+button {
+    background-color: #FFA500;
+    color: #fff;
+    padding: 22px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 18px;
+    transition: background-color 0.3s ease;
+    width: 100%;
+}
+
+button:hover {
+    background-color: #FF8C00;
+}
+
+@media (max-width: 768px) {
+    .login-image {
+        display: none;
+    }
+
+    .login-form {
+        border-radius: 0;
+    }
+}

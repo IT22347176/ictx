@@ -1,0 +1,339 @@
+/* Studentdashboards.css */
+.classroom-box a {
+    text-decoration: none; /* Remove underline for the anchor element */
+    color: #4a6bff; /* Set the text color for the anchor element */
+}
+
+body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    background-color: #f8f9fa;
+    overflow: hidden; /* Hide overflow to prevent scrolling */
+}
+
+#main-content {
+    display: flex;
+    height: 100vh; /* 100% of the viewport height */
+}
+
+.left-part {
+    width: 30%;
+    background: linear-gradient(to bottom, #004080, #FF8C00); /* Dark blue to orange gradient */
+    color: white;
+    padding: 20px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.left-part h1 {
+    margin-bottom: 20px;
+}
+
+.left-part p {
+    margin: 10px 0;
+}
+
+.right-part {
+    flex-grow: 1;
+    padding: 20px;
+    box-sizing: border-box;
+    overflow-y: auto; /* Enable scrolling for the right part if needed */
+}
+
+h1, h2 {
+    color: #4a6bff;
+}
+.classroom-boxes {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin-top: 20px;
+}
+
+.classroom-box {
+    background-color: #fff;
+    color: #4a6bff;
+    padding: 40px 20px;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 20px;
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+    width: 25%; /* Adjust width as needed */
+    margin-bottom: 20px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    text-decoration: none;
+}
+
+.classroom-box:hover {
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    transform: scale(1.05);
+}
+
+.box-icon {
+    font-size: 30px;
+    margin-bottom: 10px;
+}
+
+/* Modern styles for admin info */
+.admin-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.logout-button {
+    background-color: #dc3545; /* Red */
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+    margin-top: 20px;
+}
+
+.logout-button:hover {
+    background-color: #c82333; /* Darker red on hover */
+}
+
+
+
+/* Additional styling for the Add Class button */
+.add-class-button {
+    background-color: #007BFF; /* Blue */
+    color: white;
+    padding: 40px 20px;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 20px;
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+    width: 28%;
+    margin-top: 20px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    text-decoration: none;
+}
+
+.add-class-button:hover {
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    transform: scale(1.05);
+}
+
+
+.classroom-box {
+    /* Existing styles for classroom boxes */
+    position: relative;
+}
+
+
+
+.delete-form {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.delete-button {
+    background-color: #161414;
+    color: #fff;
+    border: none;
+    border-radius: 50%;
+    font-size: 18px;
+    padding: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.delete-button:hover {
+    background-color: #c82333;
+}
+
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    background-color: #fefefe;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.modal button {
+    padding: 10px;
+    margin: 5px;
+    cursor: pointer;
+}
+
+/* Add this section at the end of your existing CSS file */
+
+.month-boxes {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin-top: 20px;
+}
+
+.month-box {
+    background-color: #fff;
+    color: #4a6bff;
+    padding: 40px 20px;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 20px;
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+    width: 48%; /* Adjust the width as needed */
+    margin-bottom: 20px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    text-decoration: none;
+}
+
+.month-box:hover {
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    transform: scale(1.05);
+}
+
+
+/* Add this section at the end of your existing CSS file */
+
+/* Hide left part in mobile view */
+@media only screen and (max-width: 600px) {
+    .left-part {
+        display: none;
+    }
+
+    .menu-button {
+        display: block;
+        position: fixed;
+        top: 10px;
+        left: 10px;
+        font-size: 24px;
+        cursor: pointer;
+    }
+}
+
+.menu-button:hover {
+    color: #4a6bff; /* Change color on hover as needed */
+}
+
+/* Styles for the menu */
+.menu {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom, #004080, #FF8C00);
+    color: white;
+    padding-top: 20px;
+    box-sizing: border-box;
+    overflow-y: auto;
+}
+
+.menu a {
+    text-decoration: none;
+    color: white;
+    margin: 10px 0;
+    font-size: 18px;
+    transition: color 0.3s ease;
+}
+
+.menu a:hover {
+    color: #4a6bff; /* Change color on hover as needed */
+}
+
+/* Hide the left part in mobile view */
+@media (max-width: 768px) {
+    .left-part {
+        display: none;
+    }
+
+    /* Display the menu button in mobile view */
+    .menu-button {
+        display: block;
+        position: fixed;
+        top: 10px;
+        left: 10px;
+        background-color: #4a6bff;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        padding: 10px;
+        cursor: pointer;
+        font-size: 16px;
+        z-index: 2;
+    }
+}
+
+/* AddClassrooms.css */
+/* ... (Existing styles) ... */
+
+/* Hide menu button in desktops */
+@media (min-width: 768px) {
+    .menu-button {
+        display: none;
+    }
+}
+
+/* Styles for the close button */
+.close-button {
+    display: none; /* Initially hide the close button */
+}
+
+/* Show close button when the menu is open in mobile view */
+body.menu-open .close-button {
+    display: block;
+}
+
+
+@media only screen and (min-width: 768px) {
+    .month-boxes {
+        width: 100%; /* Adjust width as needed */
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+
+    .month-box {
+        width: 27%; /* Adjust width as needed */
+        margin-bottom: 20px;
+    }
+}
+
+.back-button {
+    background-color: #ff8c00; /* Orange color */
+    color: #fff; /* White text color */
+    padding: 10px 20px; /* Adjust padding for a more comfortable size */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.back-button:hover {
+    background-color: #ff9f44; /* Lighter orange on hover */
+    transform: scale(1.05);
+}
